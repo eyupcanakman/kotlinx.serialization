@@ -10,10 +10,11 @@ This tutorial shows you how to add the necessary plugins and dependencies for Ko
 To include the `kotlinx.serialization` library in your project, add the corresponding plugin and dependency configuration based on your build tool:
 
 <tabs>
-<tab id="kotlin" title="Gradle Kotlin">
+<tab id="kotlin" title="Gradle">
 
 ```kotlin
-// build.gradle.kts
+// build.gradle(.kts)
+
 plugins {
     kotlin("plugin.serialization") version "%kotlinVersion%"
 }
@@ -24,24 +25,12 @@ dependencies {
 ```
 
 </tab>
-<tab id="groovy" title="Gradle Groovy">
 
-```groovy
-// build.gradle
-plugins {
-   id 'org.jetbrains.kotlin.plugin.serialization' version '%kotlinVersion%'  
-}
-
-dependencies {
-    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:%serializationVersion%'
-}
-```
-
-</tab>
 <tab id="maven" title="Maven">
 
 ```xml
 <!-- pom.xml -->
+
 <properties>
     <kotlin.version>%kotlinVersion%</kotlin.version>
     <serialization.version>%serializationVersion%</serialization.version>
