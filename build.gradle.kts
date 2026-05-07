@@ -15,6 +15,7 @@ plugins {
     id("benchmark-conventions")
     id("publishing-check-conventions")
     id("kover-conventions")
+    id("cache-redirector-conventions")
 
     alias(libs.plugins.serialization) apply false
 }
@@ -170,5 +171,3 @@ val documentedSubprojects
         "kotlinx-serialization-hocon",
         "kotlinx-serialization-protobuf"
     )
-
-project.configureJsCacheRedirector()
